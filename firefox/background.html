@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <!-- <script type="module" src="background.js"></script> -->
+    </head>
+    <body>
+        <!-- <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script> -->
+        <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app-compat.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-database-compat.js"></script>
+        <script>
+            browser.runtime.onMessage.addListener(handleMessage)
+            function handleMessage(request, sender, sendResponse){
+                console.log(request); //logs "your message"
+            }
+        </script>
+
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyBCOoCtCobQZrrNQWg6uwmxJZMEsghIEO4",
+                authDomain: "miss-you-5c11e.firebaseapp.com",
+                databaseURL: "https://miss-you-5c11e-default-rtdb.asia-southeast1.firebasedatabase.app",
+                projectId: "miss-you-5c11e",
+                storageBucket: "miss-you-5c11e.appspot.com",
+                messagingSenderId: "1027026610169",
+                appId: "1:1027026610169:web:46a0db2b077c258c77bf28",
+                measurementId: "G-XQMVLJD7FF"
+            };
+
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.database().ref("users/1654894").set({
+                    firstName:"Niraj",
+                    lastName:"neupane"
+                });               
+        </script>
+    </body>
+</html>

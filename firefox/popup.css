@@ -1,0 +1,46 @@
+html {
+    min-width: 350px; /* max: 600px */
+    max-width: 400px;
+    height: 400px;
+    position: relative; /* Make it relative to contain absolute positioning */
+}
+
+
+#heading {
+    margin: 0;
+    position: absolute;
+    top: 8px; /* Adjust this value as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    color: blue;
+}
+
+body {
+    background-image: url('background.avif');
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure the background covers the entire body */
+    padding-top: 50px; /* Ensure content doesn't overlap with the heading */
+}
+
+#startButton {
+    margin: 0;
+    position: absolute;
+    top: 80%; /* Adjust this value as needed */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    width: 75%;
+    background-color: transparent; /* Make the button transparent */
+    border: 2px solid #4CAF50; /* Add a border */
+    color: #4CAF50; /* Text color */
+    font-size: 16px; /* Adjust font size */
+    padding: 10px 20px; /* Adjust padding */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+
+#startButton:hover {
+    background-color: #4CAF50; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}

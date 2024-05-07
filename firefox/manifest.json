@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Remind Her",
+  "version": "1.0",
+  "description": "Remind about her regularly!",
+  "browser_action":{
+    "default_popup":"popup.html",
+    "default_icon":"heart.svg"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["contentscript.js"]
+    }
+  ],
+  "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+
+}
+
