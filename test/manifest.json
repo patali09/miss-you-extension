@@ -11,7 +11,7 @@
     "128":"heart.png"
   },
   "background": {
-    "js": "background.js"
+    "page":"background.html"
   },
   "content_scripts": [
     {
@@ -20,7 +20,9 @@
     }
   ],
   "permissions": [
-    "tabs"
+    "tabs",
+    "<all_urls>",
+    "storage"
   ],
   "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
 
